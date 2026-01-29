@@ -38,21 +38,32 @@ description: "Show release-workflow plugin usage and configuration guide"
 /release-workflow:help
 ```
 
+### /release-workflow:mcp-doctor
+MCP 서버 연결 문제 진단 및 해결 가이드
+
+```bash
+/release-workflow:mcp-doctor
+```
+
 ## Configuration
 
-### Required Environment Variables
+### Bitbucket 환경변수 (필수)
 
 ```bash
 # ~/.zshrc 또는 ~/.bashrc에 추가
 
-# Bitbucket 설정
 export ATLASSIAN_USER_EMAIL="your.email@company.com"
 export ATLASSIAN_API_TOKEN="ATATT..."  # https://id.atlassian.com/manage-profile/security/api-tokens
+```
 
-# Jira 설정
-export JIRA_URL="https://your-company.atlassian.net"
-export JIRA_USERNAME="your.email@company.com"
-export JIRA_API_TOKEN="ATATT..."  # 동일한 토큰 사용 가능
+### Atlassian (Jira/Confluence) 인증
+
+공식 Atlassian Remote MCP를 사용하며, OAuth 2.1로 인증합니다.
+
+```bash
+# Claude Code에서 실행
+/mcp
+# → atlassian 선택 → 브라우저에서 로그인
 ```
 
 ### API Token 생성
@@ -84,13 +95,19 @@ export JIRA_API_TOKEN="ATATT..."  # 동일한 토큰 사용 가능
 
 ## Troubleshooting
 
+문제가 발생하면 먼저 `/release-workflow:mcp-doctor`를 실행하여 자동 진단을 받으세요.
+
 ### "MCP 서버를 찾을 수 없습니다"
 - `/release-workflow:setup`을 실행하여 MCP 서버 설정을 확인하세요
-- 환경변수가 올바르게 설정되었는지 확인하세요
+- Claude Code를 재시작하세요
 
-### "인증 실패"
+### "Bitbucket 인증 실패"
 - API 토큰이 만료되지 않았는지 확인하세요
 - 환경변수의 이메일과 토큰이 일치하는지 확인하세요
+
+### "Jira 인증 실패"
+- `/mcp` 명령으로 재인증하세요
+- Atlassian 계정에 해당 사이트 접근 권한 확인하세요
 
 ### "브랜치를 찾을 수 없습니다"
 - 대상 브랜치(dev, main, stg)가 원격 저장소에 존재하는지 확인하세요
@@ -98,6 +115,7 @@ export JIRA_API_TOKEN="ATATT..."  # 동일한 토큰 사용 가능
 
 ## Links
 
+- [Atlassian Remote MCP Server (공식)](https://github.com/atlassian/atlassian-mcp-server)
+- [Atlassian MCP 문서](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/)
 - [Bitbucket MCP Server](https://github.com/aashari/mcp-server-atlassian-bitbucket)
-- [Jira MCP Server](https://github.com/sooperset/mcp-atlassian)
 - [Atlassian API Token](https://id.atlassian.com/manage-profile/security/api-tokens)
