@@ -1,4 +1,4 @@
-# Release Workflow
+# Hard PR
 
 Atlassian Bitbucket과 Jira를 위한 멀티 브랜치 PR 생성 및 티켓 관리 자동화 Claude Code 플러그인입니다.
 
@@ -14,14 +14,14 @@ Atlassian Bitbucket과 Jira를 위한 멀티 브랜치 PR 생성 및 티켓 관�
 ### Step 1: 저장소 클론
 
 ```bash
-git clone https://github.com/0-ROK/release-workflow.git ~/.claude/plugins/release-workflow
+git clone https://github.com/0-ROK/hard-pr.git ~/.claude/plugins/hard-pr
 ```
 
 ### Step 2: 플러그인 설치
 
 Claude Code에서:
 ```bash
-/plugin install ~/.claude/plugins/release-workflow
+/plugin install ~/.claude/plugins/hard-pr
 ```
 
 ### Step 3: 환경변수 설정
@@ -54,36 +54,36 @@ MCP 서버 설정을 로드하려면 재시작이 필요합니다.
 
 ```bash
 # 브랜치 이름에서 티켓 자동 추출 (예: feature/PROJ-123 → PROJ-123)
-/release-workflow:release
+/hard-pr:release
 
 # 특정 티켓 지정
-/release-workflow:release PROJ-123
+/hard-pr:release PROJ-123
 ```
 
 ### 옵션
 
 ```bash
 # 특정 브랜치만 대상
-/release-workflow:release PROJ-123 --target dev,main
+/hard-pr:release PROJ-123 --target dev,main
 
 # 새 Jira 티켓 생성과 함께
-/release-workflow:release --new "새로운 기능 구현"
+/hard-pr:release --new "새로운 기능 구현"
 ```
 
 ### 기타 명령어
 
 ```bash
 # 도움말
-/release-workflow:help
+/hard-pr:help
 
 # 설정 가이드
-/release-workflow:setup
+/hard-pr:setup
 ```
 
 ## Workflow
 
 ```
-/release-workflow:release
+/hard-pr:release
 
 [1/5] 환경 검증...
       ✓ 현재 브랜치: feature/PROJ-123
@@ -121,9 +121,9 @@ MCP 서버 설정을 로드하려면 재시작이 필요합니다.
 
 | Command | Description |
 |---------|-------------|
-| `/release-workflow:release` | 메인 워크플로우 - PR 생성 및 Jira 처리 |
-| `/release-workflow:help` | 도움말 표시 |
-| `/release-workflow:setup` | 초기 설정 가이드 |
+| `/hard-pr:release` | 메인 워크플로우 - PR 생성 및 Jira 처리 |
+| `/hard-pr:help` | 도움말 표시 |
+| `/hard-pr:setup` | 초기 설정 가이드 |
 
 ## Requirements
 
@@ -138,7 +138,7 @@ MCP 서버 설정을 로드하려면 재시작이 필요합니다.
 ## Update
 
 ```bash
-cd ~/.claude/plugins/release-workflow
+cd ~/.claude/plugins/hard-pr
 git pull
 ```
 
@@ -146,10 +146,10 @@ git pull
 
 ```bash
 # 플러그인 제거
-/plugin uninstall release-workflow
+/plugin uninstall hard-pr
 
 # 파일 삭제
-rm -rf ~/.claude/plugins/release-workflow
+rm -rf ~/.claude/plugins/hard-pr
 ```
 
 ## License

@@ -1,48 +1,48 @@
 ---
-description: "Show release-workflow plugin usage and configuration guide"
+description: "Show hard-pr plugin usage and configuration guide"
 ---
 
 # Release Workflow Help
 
 ## Overview
 
-`release-workflow` 플러그인은 Atlassian Bitbucket과 Jira를 위한 멀티 브랜치 PR 생성 및 티켓 관리 자동화 도구입니다.
+`hard-pr` 플러그인은 Atlassian Bitbucket과 Jira를 위한 멀티 브랜치 PR 생성 및 티켓 관리 자동화 도구입니다.
 
 ## Commands
 
-### /release-workflow:release
+### /hard-pr:release
 메인 워크플로우 실행 - PR 생성 및 Jira 티켓 처리
 
 ```bash
 # 기존 Jira 티켓으로 PR 생성
-/release-workflow:release PROJ-123
+/hard-pr:release PROJ-123
 
 # 특정 브랜치만 대상으로 PR 생성
-/release-workflow:release PROJ-123 --target dev,main
+/hard-pr:release PROJ-123 --target dev,main
 
 # 새 Jira 티켓 생성과 함께 PR 생성
-/release-workflow:release --new "새로운 기능 구현"
+/hard-pr:release --new "새로운 기능 구현"
 ```
 
-### /release-workflow:setup
+### /hard-pr:setup
 초기 설정 - 환경변수 및 MCP 서버 설정 가이드
 
 ```bash
-/release-workflow:setup
+/hard-pr:setup
 ```
 
-### /release-workflow:help
+### /hard-pr:help
 이 도움말 표시
 
 ```bash
-/release-workflow:help
+/hard-pr:help
 ```
 
-### /release-workflow:mcp-doctor
+### /hard-pr:mcp-doctor
 MCP 서버 연결 문제 진단 및 해결 가이드
 
 ```bash
-/release-workflow:mcp-doctor
+/hard-pr:mcp-doctor
 ```
 
 ## Configuration
@@ -76,7 +76,7 @@ export ATLASSIAN_API_TOKEN="ATATT..."  # https://id.atlassian.com/manage-profile
 ## Workflow
 
 ```
-/release-workflow:release PROJ-123
+/hard-pr:release PROJ-123
 
 [1/4] 환경 검증...
       ✓ 현재 브랜치: feature/PROJ-123
@@ -95,10 +95,10 @@ export ATLASSIAN_API_TOKEN="ATATT..."  # https://id.atlassian.com/manage-profile
 
 ## Troubleshooting
 
-문제가 발생하면 먼저 `/release-workflow:mcp-doctor`를 실행하여 자동 진단을 받으세요.
+문제가 발생하면 먼저 `/hard-pr:mcp-doctor`를 실행하여 자동 진단을 받으세요.
 
 ### "MCP 서버를 찾을 수 없습니다"
-- `/release-workflow:setup`을 실행하여 MCP 서버 설정을 확인하세요
+- `/hard-pr:setup`을 실행하여 MCP 서버 설정을 확인하세요
 - Claude Code를 재시작하세요
 
 ### "Bitbucket 인증 실패"

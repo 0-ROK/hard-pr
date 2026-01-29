@@ -152,6 +152,6 @@ curl -s -o /dev/null -w "%{http_code}" https://mcp.atlassian.com/health || echo 
 
 ## 추가 도움말
 
-- 설정 가이드: `/release-workflow:setup`
-- 전체 도움말: `/release-workflow:help`
+- 설정 가이드: `/hard-pr:setup`
+- 전체 도움말: `/hard-pr:help`
 - [Atlassian MCP 공식 문서](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/)

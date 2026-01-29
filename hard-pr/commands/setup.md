@@ -4,7 +4,7 @@ description: "Interactive setup for Atlassian API tokens and configuration"
 
 # Release Workflow Setup
 
-이 가이드는 `release-workflow` 플러그인을 설정하는 과정을 안내합니다.
+이 가이드는 `hard-pr` 플러그인을 설정하는 과정을 안내합니다.
 
 ## Step 1: Atlassian API Token 생성
 
@@ -92,7 +92,7 @@ Jira와 Confluence 연동은 OAuth 2.1 인증을 통해 이루어집니다.
 "내 Jira 프로젝트 목록을 조회해줘"라고 요청해보세요.
 
 ### MCP 상태 진단
-문제가 발생하면 `/release-workflow:mcp-doctor`를 실행하여 진단하세요.
+문제가 발생하면 `/hard-pr:mcp-doctor`를 실행하여 진단하세요.
 
 ## Step 7: 첫 실행
 
@@ -100,10 +100,10 @@ Jira와 Confluence 연동은 OAuth 2.1 인증을 통해 이루어집니다.
 
 ```bash
 # 브랜치 이름에서 티켓 자동 추출
-/release-workflow:release
+/hard-pr:release
 
 # 또는 티켓 직접 지정
-/release-workflow:release PROJ-123
+/hard-pr:release PROJ-123
 ```
 
 ## 자동 탐색 기능
@@ -116,7 +116,7 @@ Jira와 Confluence 연동은 OAuth 2.1 인증을 통해 이루어집니다.
 
 ## Troubleshooting
 
-문제가 발생하면 먼저 `/release-workflow:mcp-doctor`를 실행하여 자동 진단을 받으세요.
+문제가 발생하면 먼저 `/hard-pr:mcp-doctor`를 실행하여 자동 진단을 받으세요.
 
 ### 환경변수가 인식되지 않음
 
@@ -143,7 +143,7 @@ source ~/.zshrc
 
 1. Node.js 18+ 설치 확인: `node --version`
 2. 네트워크 연결 확인
-3. `/release-workflow:mcp-doctor`로 상세 진단
+3. `/hard-pr:mcp-doctor`로 상세 진단
 
 ### Bitbucket 권한 오류
 
@@ -159,11 +159,11 @@ OAuth로 로그인한 계정이 해당 Jira 프로젝트에 이슈 조회/생성
 
 ```bash
 # 기본 사용 (브랜치에서 티켓 자동 추출)
-/release-workflow:release
+/hard-pr:release
 
 # 티켓 지정
-/release-workflow:release PROJ-123
+/hard-pr:release PROJ-123
 
 # 도움말
-/release-workflow:help
+/hard-pr:help
 ```

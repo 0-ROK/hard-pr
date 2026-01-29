@@ -221,14 +221,14 @@ export JIRA_API_TOKEN="ATATT..."
 
 ```bash
 # 브랜치 이름에서 티켓 자동 추출
-/release-workflow:release
+/hard-pr:release
 
 # 특정 티켓 지정
-/release-workflow:release PROJ-123
+/hard-pr:release PROJ-123
 
 # 특정 브랜치만 대상
-/release-workflow:release --target dev,main
+/hard-pr:release --target dev,main
 
 # 새 Jira 티켓 생성
-/release-workflow:release --new "새로운 기능 구현"
+/hard-pr:release --new "새로운 기능 구현"
 ```

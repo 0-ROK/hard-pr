@@ -1,5 +1,5 @@
 {
-  "name": "release-workflow",
+  "name": "hard-pr",
   "version": "1.0.0",
   "description": "Claude Code plugin for Atlassian Bitbucket PR and Jira workflow automation",
   "main": "index.js",
@@ -26,12 +26,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/0-ROK/release-workflow"
+    "url": "https://github.com/0-ROK/hard-pr"
   },
   "bugs": {
-    "url": "https://github.com/0-ROK/release-workflow/issues"
+    "url": "https://github.com/0-ROK/hard-pr/issues"
   },
-  "homepage": "https://github.com/0-ROK/release-workflow#readme",
+  "homepage": "https://github.com/0-ROK/hard-pr#readme",
   "engines": {
     "node": ">=18.0.0"
   }
