@@ -1,0 +1,38 @@
+{
+  "name": "release-workflow",
+  "version": "1.0.0",
+  "description": "Claude Code plugin for Atlassian Bitbucket PR and Jira workflow automation",
+  "main": "index.js",
+  "files": [
+    ".claude-plugin/",
+    ".mcp.json",
+    "commands/",
+    "agents/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "bitbucket",
+    "jira",
+    "atlassian",
+    "pr",
+    "pull-request",
+    "workflow",
+    "automation"
+  ],
+  "author": "joyeonglog",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0-ROK/release-workflow"
+  },
+  "bugs": {
+    "url": "https://github.com/0-ROK/release-workflow/issues"
+  },
+  "homepage": "https://github.com/0-ROK/release-workflow#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

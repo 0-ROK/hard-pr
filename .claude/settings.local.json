@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/joyeonglog/hard-pr log --oneline -10)",
+      "Read(//Users/joyeonglog/.claude/**)",
+      "Read(//Users/joyeonglog/.claude/plugins/**)",
+      "Bash(gh:*)",
+      "Bash(gh auth:*)",
+      "WebFetch(domain:github.com)"
+    ]
+  }
+}

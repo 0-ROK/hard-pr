@@ -1,0 +1,9 @@
+{
+  "name": "release-workflow",
+  "description": "Automate multi-branch PR creation and Jira ticket management for Atlassian Bitbucket",
+  "version": "1.0.0",
+  "author": {
+    "name": "joyeonglog"
+  },
+  "keywords": ["bitbucket", "jira", "pr", "release", "atlassian", "workflow"]
+}
